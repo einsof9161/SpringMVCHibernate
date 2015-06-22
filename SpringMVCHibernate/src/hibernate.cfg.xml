@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory> 
+ 
+		<property name="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</property>
+		<property name="hibernate.show_sql">false</property>
+		<property name="hibernate.transaction.factory_class">org.hibernate.transaction.JDBCTransactionFactory</property>
+		<property name="hibernate.jdbc.batch_size">100</property>
+
+		<!-- Hibernate4 這裡和Hibernate3不一樣！！！-->
+		<property name="hibernate.current_session_context_class">org.springframework.orm.hibernate4.SpringSessionContext</property>
+		
+		<!-- Mapping -->
+<!-- 		<mapping class="com.kw.kmdoc.attraction.business.vo.AttractionVo" /> -->
+		<mapping class="com.kw.kmdoc.authority.persistence.vo.Account" />
+		<mapping class="com.kw.kmdoc.board.persistence.vo.Board" />
+		<mapping class="com.kw.kmdoc.authority.persistence.vo.SysFunction" />
+		<mapping class="com.kw.kmdoc.document.persistence.vo.DocFileMapping" />
+		<mapping class="com.kw.kmdoc.document.persistence.vo.DocFiles" />
+		<mapping class="com.kw.kmdoc.document.persistence.vo.Document" />
+		<mapping class="com.kw.kmdoc.document.persistence.vo.Folder" />
+		<mapping class="com.kw.kmdoc.authority.persistence.vo.SysInfo" />
+<!-- 		<mapping class="com.kw.kmdoc.authority.business.vo.RoleVo" /> -->
+	</session-factory>
+</hibernate-configuration>
