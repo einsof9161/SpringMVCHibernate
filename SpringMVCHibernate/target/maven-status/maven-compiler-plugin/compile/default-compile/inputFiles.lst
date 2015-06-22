@@ -1,4 +1,7 @@
-/Users/ryan/IDE/eclipse/workspace/SpringMVCHibernate/src/main/ryan/test/business/vo/TestVO.java
-/Users/ryan/IDE/eclipse/workspace/SpringMVCHibernate/src/main/ryan/test/business/impl/TestManagerImpl.java
-/Users/ryan/IDE/eclipse/workspace/SpringMVCHibernate/src/main/ryan/test/business/TestManager.java
-/Users/ryan/IDE/eclipse/workspace/SpringMVCHibernate/src/main/ryan/test/presentation/TestController.java
+/Users/ryan/git/SpringMVCHibernate/SpringMVCHibernate/src/main/ryan/test/presentation/TestController.java
+/Users/ryan/git/SpringMVCHibernate/SpringMVCHibernate/src/main/ryan/test/business/TestManager.java
+/Users/ryan/git/SpringMVCHibernate/SpringMVCHibernate/src/main/ryan/test/business/impl/TestManagerImpl.java
+/Users/ryan/git/SpringMVCHibernate/SpringMVCHibernate/src/main/ryan/bulletin/persistence/vo/Bulletin.java
+/Users/ryan/git/SpringMVCHibernate/SpringMVCHibernate/src/main/ryan/test/business/vo/TestVO.java
+/Users/ryan/git/SpringMVCHibernate/SpringMVCHibernate/src/main/ryan/bulletin/business/vo/BulletinVO.java
+/Users/ryan/git/SpringMVCHibernate/SpringMVCHibernate/src/main/ryan/bulletin/presentation/BulletinController.java

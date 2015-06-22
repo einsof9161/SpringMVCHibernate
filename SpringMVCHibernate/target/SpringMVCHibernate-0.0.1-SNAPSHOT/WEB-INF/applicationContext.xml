@@ -24,31 +24,34 @@
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver"
 		p:prefix="/WEB-INF/views/" p:suffix=".jsp" />
 	<!-- 資料庫 -->
-	<!-- <bean id="dataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
-		<property name="jndiName" value="java:comp/env/jdbc/gg"></property>
-	</bean> -->
+	<bean id="dataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
+		<property name="jndiName" value="java:comp/env/jdbc/mytest"></property>
+	</bean>
 	
 	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver"
 	p:maxUploadSize="30960000" p:maxInMemorySize="1024" />
 
 	<!-- SessionFactory -->
-	<!-- <bean id="sessionFactory"
+	<bean id="sessionFactory"
 		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />
 		<property name="configLocation">
 			<value>classpath:hibernate.cfg.xml</value>
 		</property>
-	</bean> -->
+	</bean>
 
 	<!-- 事務管理器 -->
-	<!-- <bean id="transactionManager"
+	<bean id="transactionManager"
 		class="org.springframework.orm.hibernate4.HibernateTransactionManager">
 		<property name="sessionFactory" ref="sessionFactory" />
-	</bean> -->
+	</bean>
 	<!-- annotation事務管理 -->
-	<!-- <tx:annotation-driven transaction-manager="transactionManager" /> -->
+	<tx:annotation-driven transaction-manager="transactionManager" />
 
 	<!-- DAO -->
+	<bean id="bulletinDAO" parent="GenericDAO">
+		<constructor-arg ref="bulletin"></constructor-arg>
+	</bean>
 <!-- 	<bean id="attractionDAO" parent="GenericDAO"> -->
 <!-- 		<constructor-arg ref="attractionVo"></constructor-arg> -->
 <!-- 	</bean> -->
