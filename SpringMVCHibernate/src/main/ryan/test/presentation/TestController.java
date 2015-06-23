@@ -14,14 +14,15 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 @RequestMapping("/test")
 public class TestController {
+	
 	@Autowired
 	private TestManager testService;
 	
 	@RequestMapping(value="index",method=RequestMethod.GET)
 	public String index(Model model){ 
 		try{
-			List<TestVO> voList = testService.search();
-			model.addAttribute("list",voList);
+//			List<TestVO> voList = testService.search();
+//			model.addAttribute("list",voList);
 		}catch(Exception e){
 			
 		}
